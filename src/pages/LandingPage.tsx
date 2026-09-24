@@ -1,21 +1,16 @@
-import { useNavigate } from "react-router-dom";
-
-const SYMBOLS = ["BTC", "ETH"];
+import { Activity, ArrowRight, ArrowUpRight, BarChart3, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function LandingPage() {
-  const navigate = useNavigate();
-
-  return (
-    <div className="landing">
-      <h1>InvestAIQ</h1>
-      <p>Live pattern recognition and suggestions for crypto prices.</p>
-      <div className="symbol-picker">
-        {SYMBOLS.map((symbol) => (
-          <button key={symbol} onClick={() => navigate(`/dashboard/${symbol}`)}>
-            {symbol}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
+  return <div className="landing-page">
+    <header className="landing-nav"><Link to="/" className="brand"><span className="brand-mark"><Activity size={17} strokeWidth={2.7}/></span><span>invest<span className="brand-light">aiq</span></span><span className="brand-beta">BETA</span></Link><nav className="landing-nav-links"><a href="#markets">Markets</a><a href="#approach">Our approach</a><Link className="nav-cta" to="/dashboard/BTC">Open dashboard <ArrowRight size={13}/></Link></nav></header>
+    <main>
+      <section className="landing-hero"><div className="hero-copy"><span className="hero-tag"><i/> MARKET SIGNALS, MADE CLEAR</span><h1>See the market<br/>with <span>more clarity.</span></h1><p>InvestAIQ turns live crypto market data into a calmer, more considered view of what’s moving. Understand price patterns without the noise.</p><div className="hero-actions"><Link className="hero-primary" to="/dashboard/BTC">Explore the dashboard <ArrowRight size={14}/></Link><a className="hero-secondary" href="#approach">How it works <ArrowUpRight size={13}/></a></div><div className="hero-proof"><div className="proof-avatars"><i/><i/><i/></div><span>Focused market context, refreshed every minute</span></div></div>
+        <div className="hero-window"><div className="window-top"><i className="window-dot"/><i className="window-dot"/><i className="window-dot"/><span className="window-title">investaiq / market overview</span><span className="window-status">● LIVE DATA</span></div><div className="window-dashboard"><div className="window-label">BITCOIN · BTC / USD</div><div className="window-value-row"><span className="window-value">Market signals</span><span className="window-gain">24H VIEW</span></div><svg className="window-chart" viewBox="0 0 520 155" preserveAspectRatio="none" aria-label="Decorative sample price chart"><defs><linearGradient id="heroFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#a797f5" stopOpacity=".25"/><stop offset="1" stopColor="#a797f5" stopOpacity="0"/></linearGradient></defs><path d="M0 118 C25 105 34 113 54 96 S89 115 109 89 S147 101 166 71 S202 89 223 66 S250 81 273 58 S307 72 326 46 S360 67 378 49 S410 61 432 30 S470 43 488 18 S507 23 520 7 V155 H0Z" fill="url(#heroFill)"/><path d="M0 118 C25 105 34 113 54 96 S89 115 109 89 S147 101 166 71 S202 89 223 66 S250 81 273 58 S307 72 326 46 S360 67 378 49 S410 61 432 30 S470 43 488 18 S507 23 520 7" fill="none" stroke="#ac9bfa" strokeWidth="2"/><path d="M0 40H520M0 80H520M0 120H520" stroke="#34323f" strokeDasharray="3 5"/></svg><div className="window-cards"><div className="window-card"><span>Pattern signal</span><b className="green">UPWARD TREND</b></div><div className="window-card"><span>Observation window</span><b>24 HOURS</b></div><div className="window-card"><span>Data source</span><b>LIVE MARKET</b></div></div></div></div>
+      </section>
+      <section className="landing-section" id="markets"><div className="landing-section-head"><div><span>YOUR MARKET, IN FOCUS</span><h2>Start with the assets you follow.</h2></div><span className="markets-live"><i/> LIVE MARKET DATA</span></div><div className="asset-grid"><Link className="landing-asset" to="/dashboard/BTC"><span className="coin-icon btc">₿</span><span className="landing-asset-title"><b>Bitcoin</b><small>BTC / USD</small></span><span className="landing-asset-price">View insights<small>Open dashboard <ArrowUpRight size={11}/></small></span></Link><Link className="landing-asset" to="/dashboard/ETH"><span className="coin-icon eth">◆</span><span className="landing-asset-title"><b>Ethereum</b><small>ETH / USD</small></span><span className="landing-asset-price">View insights<small>Open dashboard <ArrowUpRight size={11}/></small></span></Link></div></section>
+      <section className="landing-section approach-section" id="approach"><div className="landing-section-head"><div><span>BUILT FOR PERSPECTIVE</span><h2>Useful context. Transparent signals.</h2></div></div><div className="feature-grid"><article className="feature-card"><span><Activity size={17}/></span><b>Live market context</b><p>Follow price movement with regularly refreshed data and a clean 24-hour view.</p></article><article className="feature-card"><span><Sparkles size={17}/></span><b>Readable pattern signals</b><p>See consecutive price movement summarized in plain language, with the underlying context close by.</p></article><article className="feature-card"><span><ShieldCheck size={17}/></span><b>Designed for perspective</b><p>Signals describe observed data. They’re not forecasts or personalized investment advice.</p></article></div></section>
+    </main>
+    <footer className="landing-foot"><span>© 2026 InvestAIQ <i>·</i> Independent market intelligence</span><span><BarChart3 size={13}/> Market data powered by CoinGecko</span></footer>
+  </div>;
 }

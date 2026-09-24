@@ -14,8 +14,8 @@ export function HistoryPage() {
 
   return (
     <AppShell symbol={symbol}>
-      <h1>Pattern history — {symbol}</h1>
-      <div className="panel">
+      <div className="history-heading"><div><div className="eyebrow"><span className="eyebrow-square">◷</span> ACTIVITY LOG <span className="heading-sep">/</span> {symbol.toUpperCase()}</div><h1>Signal history</h1><p>Recent patterns detected for {symbol.toUpperCase()}.</p></div></div>
+      <div className="surface history-surface">
         <HistoryList entries={entries} />
       </div>
     </AppShell>

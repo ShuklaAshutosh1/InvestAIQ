@@ -16,11 +16,15 @@ export class MarketService {
     if (!coinId) throw new Error(`Unsupported symbol: ${symbol}`);
 
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`
+      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`,
+      { signal: AbortSignal.timeout(12_000), headers: { accept: "application/json" } }
     );
     if (!response.ok) throw new Error(`CoinGecko error: ${response.status}`);
 
-    const data = (await response.json()) as { prices: [number, number][] };
+    const data = (await response.json()) as { prices?: [number, number][] };
+    if (!Array.isArray(data.prices) || data.prices.length < 2) {
+      throw new Error("Market provider returned no usable price data");
+    }
     const recent = data.prices.slice(-24);
     const points: PricePoint[] = recent.map(([time, price]) => ({ time, price }));
     const prices = points.map((p) => p.price);

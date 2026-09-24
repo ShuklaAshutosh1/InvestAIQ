@@ -23,13 +23,13 @@ export function detectPattern(prices: number[]): Pattern {
 
 export function suggestionFor(pattern: Pattern): string {
   if (pattern.direction === "up" && pattern.length >= 3) {
-    return `Sustained upward streak (${pattern.length} points). Momentum favors longs, but watch for a pullback after a run this long.`;
+    return `Sustained upward movement observed across ${pattern.length} consecutive price changes. This describes recent data and does not predict what happens next.`;
   }
   if (pattern.direction === "up") {
     return `Short upward move (${pattern.length} point${pattern.length === 1 ? "" : "s"}). Too early to call a trend.`;
   }
   if (pattern.direction === "down" && pattern.length >= 3) {
-    return `Sustained downward streak (${pattern.length} points). Downside pressure building — a bounce is more likely the longer this runs.`;
+    return `Sustained downward movement observed across ${pattern.length} consecutive price changes. This describes recent data and does not predict what happens next.`;
   }
   if (pattern.direction === "down") {
     return `Short downward move (${pattern.length} point${pattern.length === 1 ? "" : "s"}). Not yet a clear trend.`;

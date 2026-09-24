@@ -10,6 +10,7 @@ async function main() {
   const database = createDatabase();
   const marketService = new MarketService(database);
   const port = Number(process.env.PORT ?? 4173);
+  const host = process.env.HOST ?? "127.0.0.1";
 
   app.disable("x-powered-by");
   app.use((_request, response, next) => {
@@ -36,8 +37,8 @@ async function main() {
     response.sendFile(resolve(distPath, "index.html"));
   });
 
-  const server = app.listen(port, "127.0.0.1", () => {
-    console.log(`InvestAIQ is running at http://127.0.0.1:${port}`);
+  const server = app.listen(port, host, () => {
+    console.log(`InvestAIQ is running at http://${host}:${port}`);
   });
 
   function shutdown() {
