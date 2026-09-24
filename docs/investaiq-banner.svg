@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="440" viewBox="0 0 1600 440" role="img" aria-labelledby="title desc">
+  <title id="title">InvestAIQ — Market intelligence, made clear</title>
+  <desc id="desc">A dark financial interface inspired banner with a rising market line, data points, and BTC and ETH symbols.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10111a"/><stop offset=".55" stop-color="#151521"/><stop offset="1" stop-color="#101a1a"/></linearGradient>
+    <radialGradient id="glow" cx=".82" cy=".4" r=".75"><stop stop-color="#7964d9" stop-opacity=".32"/><stop offset="1" stop-color="#7964d9" stop-opacity="0"/></radialGradient>
+    <linearGradient id="line" x1=".4" y1="1" x2=".8" y2="0"><stop stop-color="#58d7a1"/><stop offset="1" stop-color="#b9a7ff"/></linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9d8af4" stop-opacity=".26"/><stop offset="1" stop-color="#9d8af4" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#aab0c5" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1600" height="440" rx="22" fill="url(#bg)"/><rect width="1600" height="440" rx="22" fill="url(#glow)"/><rect width="1600" height="440" rx="22" fill="url(#grid)"/>
+  <rect x="94" y="89" width="42" height="42" rx="12" fill="#a99af6"/><path d="M104 111h7l5-10 7 20 5-10h4" fill="none" stroke="#15131d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="155" y="122" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f1eff8">invest<tspan fill="#a99af6">aiq</tspan></text>
+  <rect x="268" y="102" width="43" height="20" rx="5" fill="#292539" stroke="#48415e"/><text x="278" y="116" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#c7bcff">BETA</text>
+  <text x="95" y="207" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3.2" fill="#aaa0df">LIVE CRYPTO MARKET CONTEXT</text>
+  <text x="92" y="282" font-family="Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2" fill="#f6f4fb">See the market</text>
+  <text x="92" y="345" font-family="Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2" fill="#aa99f5">with more clarity.</text>
+  <text x="96" y="385" font-family="Arial, sans-serif" font-size="15" fill="#a8a8b7">Readable price patterns for Bitcoin and Ethereum.</text>
+  <g opacity=".5" stroke="#aaa1c9" stroke-dasharray="4 8"><path d="M740 104H1504"/><path d="M740 178H1504"/><path d="M740 252H1504"/><path d="M740 326H1504"/></g>
+  <path d="M737 337 C785 331 798 298 840 308 S899 276 943 288 S1003 242 1042 258 S1108 215 1142 233 S1199 180 1235 202 S1291 147 1320 170 S1381 130 1415 142 S1470 99 1506 82 V372 H737Z" fill="url(#fill)"/>
+  <path d="M737 337 C785 331 798 298 840 308 S899 276 943 288 S1003 242 1042 258 S1108 215 1142 233 S1199 180 1235 202 S1291 147 1320 170 S1381 130 1415 142 S1470 99 1506 82" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1506" cy="82" r="9" fill="#b7a6ff" opacity=".23"/><circle cx="1506" cy="82" r="4" fill="#d1c5ff"/>
+  <g font-family="Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle"><circle cx="1192" cy="359" r="22" fill="#31291d" stroke="#59472b"/><text x="1192" y="364" fill="#f2ae50">₿</text><circle cx="1250" cy="359" r="22" fill="#25253a" stroke="#393957"/><text x="1250" y="363" fill="#b3afff">◆</text></g>
+  <text x="1292" y="364" font-family="Arial, sans-serif" font-size="11" fill="#a7a6b5">BTC · ETH · USD</text>
+  <text x="1455" y="403" font-family="Arial, sans-serif" font-size="9" text-anchor="end" letter-spacing="1.5" fill="#787988">DESCRIPTIVE SIGNALS · NOT FORECASTS</text>
+</svg>
